@@ -1,4 +1,4 @@
-# hku-sis-timetable-to-ics
+# HKU Timetable Exporter
 
 > [!NOTE]
 > This project is under development and may not be fully functional yet.
