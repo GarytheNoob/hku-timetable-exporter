@@ -1,0 +1,5 @@
+{
+  "name": "HKU SIS Timetable Parser",
+  "description": "A high-performance utility to parse HKU SIS student portal HTML into clean, structured JSON course data, ready for integration into Chrome extensions or calendar tools.",
+  "requestFramePermissions": []
+}

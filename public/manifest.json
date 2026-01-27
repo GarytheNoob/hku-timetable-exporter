@@ -1,0 +1,22 @@
+
+{
+  "manifest_version": 3,
+  "name": "HKU SIS Timetable Parser",
+  "version": "1.0",
+  "description": "Extract and export your HKU SIS timetable to ICS/JSON easily.",
+  "permissions": [
+    "scripting",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "*://sis-main.hku.hk/*",
+    "*://*.hku.hk/*"
+  ],
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "HKU SIS Parser"
+  },
+  "icons": {
+    "128": "icon.png"
+  }
+}
