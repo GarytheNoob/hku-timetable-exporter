@@ -93,3 +93,4 @@ export const parseSisHtml = (html: string): TimetableData => {
     generatedAt: new Date().toISOString()
   };
 };
+// vim: set ts=2 sw=2 et:

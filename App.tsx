@@ -315,3 +315,4 @@ const App: React.FC = () => {
 };
 
 export default App;
+// vim: set ts=2 sw=2 et:

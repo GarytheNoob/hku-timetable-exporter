@@ -151,3 +151,4 @@ export const generateIcs = (data: TimetableData): string => {
   ics.push('END:VCALENDAR');
   return ics.join('\r\n');
 };
+// vim: set ts=2 sw=2 et:
