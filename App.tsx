@@ -173,15 +173,18 @@ const App: React.FC = () => {
             </div>
             <h2 style={{fontSize: '1.125rem', fontWeight: 800, color: '#0f172a', marginBottom: '0.5rem'}}>Welcome</h2>
             <p style={{fontSize: '0.875rem', color: '#64748b', marginBottom: '2rem', maxWidth: '280px'}}>
-              Ready to sync your schedule? Navigate to <strong>SIS Portal</strong> and click 
-              <span style={{color: '#4f46e5', fontWeight: 800}}> Capture</span>.
+              Ready to export your schedule? Navigate to <strong>your schedule page</strong> and click 
+              <span style={{color: '#118ab2', fontWeight: 800}}> Capture</span>.
             </p>
             
             <div className="w-full" style={{display: 'grid', gap: '0.75rem'}}>
               {[
-                { step: 1, text: "Open SIS Portal", link: "https://studentportal.hku.hk/" },
-                { step: 2, text: "Timetables - My Weekly Schedule - List View - Choose Sem" },
-                { step: 3, text: "Click Capture" }
+                { step: 1, text: "Open HKU Student Portal", link: "https://studentportal.hku.hk/" },
+                { step: 2, text: "Go to \"Timetables\" → \"My weekly schedule\"" },
+                { step: 3, text: "Choose \"List View\" and select the semester" },
+                { step: 4, text: "Click \"Capture\" button" },
+                { step: 5, text: "Select the courses you would like to export" },
+                { step: 6, text: "Hit \"Export to Calendar\"!" },
               ].map((item, idx) => (
                 <div key={idx} style={{background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '0.75rem', padding: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.75rem'}}>
                   <span style={{width: '20px', height: '20px', borderRadius: '50%', background: '#e0e7ff', color: '#4f46e5', fontSize: '10px', fontWeight: 800, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
@@ -301,13 +304,8 @@ const App: React.FC = () => {
             style={{fontSize: '0.875rem', borderRadius: '0.75rem'}}
           >
             <Download size={16} />
-            Sync {selectedCourseIds.size} Courses to Calendar
+            Export {selectedCourseIds.size} Courses to Calendar
           </button>
-          <div style={{textAlign: 'center', marginTop: '0.75rem'}}>
-            <span style={{fontSize: '9px', fontWeight: 800, color: '#cbd5e1', textTransform: 'uppercase', letterSpacing: '0.1em'}}>
-              {parsedData.studentName}
-            </span>
-          </div>
         </footer>
       )}
     </div>
