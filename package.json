@@ -1,5 +1,5 @@
 {
-  "name": "hku-sis-timetable-parser",
+  "name": "hku-sis-timetable-to-ics",
   "private": true,
   "version": "1.0.0",
   "type": "module",
