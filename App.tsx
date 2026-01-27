@@ -136,8 +136,8 @@ const App: React.FC = () => {
             <Calendar size={18} />
           </div>
           <div>
-            <h1 style={{fontSize: '0.9375rem', fontWeight: 800, color: '#0f172a', lineHeight: 1.2}}>SIS Sync</h1>
-            <p style={{fontSize: '0.625rem', fontWeight: 700, color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.05em'}}>HKU Timetable Utility</p>
+            <h1 style={{fontSize: '0.9375rem', fontWeight: 800, color: '#0f172a', lineHeight: 1.2}}>HKU Timetable Exporter</h1>
+            <p style={{fontSize: '0.625rem', fontWeight: 700, color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.05em'}}>Export your HKU timetable</p>
           </div>
         </div>
         
@@ -168,10 +168,10 @@ const App: React.FC = () => {
       <main className="flex-1 custom-scrollbar p-5">
         {!parsedData ? (
           <div className="h-full flex flex-col items-center justify-center text-center animate-up">
-            <div style={{width: '64px', height: '64px', background: '#f5f7ff', borderRadius: '1.25rem', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#4f46e5', marginBottom: '1.5rem'}}>
+            <div style={{width: '64px', height: '64px', background: '#f5f7ff', borderRadius: '1.25rem', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#118ab2', marginBottom: '1.5rem'}}>
               <Info size={32} />
             </div>
-            <h2 style={{fontSize: '1.125rem', fontWeight: 800, color: '#0f172a', marginBottom: '0.5rem'}}>Welcome</h2>
+            <h2 style={{fontSize: '1.125rem', fontWeight: 800, color: '#0f172a', marginBottom: '0.5rem'}}>Welcome!</h2>
             <p style={{fontSize: '0.875rem', color: '#64748b', marginBottom: '2rem', maxWidth: '280px'}}>
               Ready to export your schedule? Navigate to <strong>your schedule page</strong> and click 
               <span style={{color: '#118ab2', fontWeight: 800}}> Capture</span>.
@@ -187,10 +187,10 @@ const App: React.FC = () => {
                 { step: 6, text: "Hit \"Export to Calendar\"!" },
               ].map((item, idx) => (
                 <div key={idx} style={{background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '0.75rem', padding: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.75rem'}}>
-                  <span style={{width: '20px', height: '20px', borderRadius: '50%', background: '#e0e7ff', color: '#4f46e5', fontSize: '10px', fontWeight: 800, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                  <span style={{width: '20px', height: '20px', borderRadius: '50%', background: '#e0fbfc', color: '#118ab2', fontSize: '12px', fontWeight: 800, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
                     {item.step}
                   </span>
-                  <span style={{fontSize: '0.75rem', fontWeight: 600, color: '#475569', flex: 1}}>{item.text}</span>
+                  <span style={{fontSize: '1rem', fontWeight: 600, color: '#475569', flex: 1}}>{item.text}</span>
                   {item.link && <ExternalLink size={12} style={{color: '#cbd5e1'}} />}
                 </div>
               ))}
@@ -240,7 +240,7 @@ const App: React.FC = () => {
                     >
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-3">
-                          <div style={{color: isSelected ? '#4f46e5' : '#cbd5e1'}}>
+                          <div style={{color: isSelected ? '#118ab2' : '#cbd5e1'}}>
                             {isSelected ? <CheckSquare size={20} /> : <Square size={20} />}
                           </div>
                           <div>
