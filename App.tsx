@@ -262,12 +262,12 @@ const App: React.FC = () => {
                           </div>
                           <div>
                             <div className="flex items-center gap-2 mb-1">
-                              <h4 style={{fontSize: '0.8125rem', fontWeight: 800, color: '#0f172a', letterSpacing: '-0.01em'}}>{course.courseCode}</h4>
+                              <h4 style={{fontSize: '16px', fontWeight: 800, color: '#0f172a', letterSpacing: '-0.01em'}}>{course.courseCode} - {course.courseSection}</h4>
                               <span className={`badge ${course.status.includes('Enrolled') ? 'badge-success' : 'badge-warning'}`}>
                                 {course.status.includes('Enrolled') ? 'Enrolled' : 'Waitlist'}
                               </span>
                             </div>
-                            <p style={{fontSize: '0.75rem', color: '#64748b', fontWeight: 500, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', maxWidth: '180px'}}>
+                            <p style={{fontSize: '14px', color: '#64748b', fontWeight: 500, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis'}}>
                               {course.courseTitle}
                             </p>
                           </div>
@@ -280,7 +280,6 @@ const App: React.FC = () => {
                           {course.meetings.map((m, midx) => (
                             <div key={midx} style={{marginBottom: '0.75rem', background: 'rgba(255,255,255,0.5)', borderRadius: '10px', padding: '0.75rem', border: '1px solid #f1f5f9'}}>
                               <div className="flex items-center justify-between mb-2">
-                                <span className="badge badge-indigo">{m.section} • {m.component}</span>
                                 <span style={{fontSize: '9px', fontWeight: 700, color: '#94a3b8'}}>#{m.classNbr}</span>
                               </div>
                               <div className="flex items-start gap-2 mb-1.5">
