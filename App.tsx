@@ -18,6 +18,7 @@ import {
 } from 'lucide-react';
 import { parseSisHtml } from './services/parserService';
 import { generateIcs } from './services/icsService';
+import { MOCK_TIMETABLE_DATA } from './services/mockData';
 import type { TimetableData } from './types';
 
 declare const chrome: any;
@@ -29,7 +30,16 @@ const App: React.FC = () => {
   const [copied, setCopied] = useState(false);
   const [isExtension, setIsExtension] = useState(false);
   const [isCapturing, setIsCapturing] = useState(false);
+  const [isDevMode, setIsDevMode] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+  // Auto-load mock data in dev mode
+  useEffect(() => {
+    if (import.meta.env.DEV && !parsedData) {
+      setParsedData(MOCK_TIMETABLE_DATA);
+      setIsDevMode(true);
+    }
+  }, []);
 
   useEffect(() => {
     setIsExtension(typeof chrome !== 'undefined' && !!chrome.tabs && !!chrome.scripting);
@@ -64,6 +74,7 @@ const App: React.FC = () => {
       if (html) {
         const result = parseSisHtml(html);
         setParsedData(result);
+        setIsDevMode(false);
       } else {
         alert("Timetable not found. Are you on the 'My Class Schedule' page?");
       }
@@ -84,6 +95,7 @@ const App: React.FC = () => {
       try {
         const result = parseSisHtml(content);
         setParsedData(result);
+        setIsDevMode(false);
       } catch (err) {
         alert("Invalid SIS HTML file.");
       }
@@ -221,6 +233,11 @@ const App: React.FC = () => {
                     <button onClick={copyJson} className="btn btn-ghost" style={{padding: '4px'}}>
                       {copied ? <Check size={16} color="#10b981" /> : <Copy size={16} />}
                     </button>
+                 )}
+                 {isDevMode && (
+                   <span className="badge badge-warning" title="Using sample data for development">
+                     DEV
+                   </span>
                  )}
                  <span className="badge badge-indigo">
                    {parsedData.term.split('|')[0].trim()}
