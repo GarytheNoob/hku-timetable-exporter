@@ -1,6 +1,6 @@
 # HKU Timetable Exporter
 
-> [!NOTE]
+> [!WARNING]
 > This project is under development and may not be fully functional yet.
 
 
@@ -20,7 +20,7 @@ that can be imported into calendar applications.
 
 1. Unbox the courses you do not want to export.
 
-1. Press `Sync courses to calendar` to generate and download the ICS file.
+1. Press `Export Courses to Calendar` to generate and download the ICS file.
 
 ## Build
 
@@ -33,4 +33,9 @@ npm run build
 ```
 
 ## License
+
+> [!IMPORTANT]
+> This project is not affiliated with or endorsed by The University of Hong 
+> Kong. And should be used at your own risk.
+
 MIT
