@@ -161,3 +161,4 @@ export const MOCK_TIMETABLE_DATA: TimetableData = {
     }
   ]
 };
+// vim: set ts=2 sw=2 et:
