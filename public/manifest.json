@@ -18,5 +18,11 @@
   },
   "icons": {
     "128": "icon.png"
-  }
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "hku-timetable-exporter-garythenoob",
+      "strict_min_version": "42.0",
+      "strict_max_version": "*",
+    }
 }
