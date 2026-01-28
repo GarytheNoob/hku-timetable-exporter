@@ -29,6 +29,8 @@ export const parseSisHtml = (html: string): TimetableData => {
     const courseCode = titleParts[0] || '';
     const courseTitle = titleParts.slice(1).join(' - ') || '';
 
+    let courseSection = '';
+
     // Status / Units Grid
     // ID pattern: SSR_DUMMY_RECVW$scroll$0
     const status = doc.getElementById(`STATUS$${index}`)?.innerText.trim() || '';
@@ -58,12 +60,12 @@ export const parseSisHtml = (html: string): TimetableData => {
         const currentComponent = cells[2].innerText.trim();
 
         if (currentClassNbr) lastClassNbr = currentClassNbr;
-        if (currentSection) lastSection = currentSection;
+        if (currentSection) courseSection = currentSection;
         if (currentComponent && currentComponent !== '--') lastComponent = currentComponent;
 
         const meeting: Meeting = {
           classNbr: lastClassNbr,
-          section: lastSection,
+          // section: lastSection,
           component: lastComponent,
           daysTimes: cells[3].innerText.trim().replace(/\u00a0/g, ''),
           room: cells[4].innerText.trim(),
@@ -78,6 +80,7 @@ export const parseSisHtml = (html: string): TimetableData => {
     courses.push({
       id: index.toString(),
       courseCode,
+      courseSection,
       courseTitle,
       status,
       units,
