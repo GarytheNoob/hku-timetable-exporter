@@ -13,7 +13,12 @@ file that can be imported into calendar applications.
 
 1. Install the extension in your Chrome browser.
 
-1. Enter your HKU Portal and go to `Timetable` → `My weekly schedule` → `List View` 
+> [!NOTE]
+> The extension is not available on the Chrome Web Store yet, so you need to
+> load it as an unpacked extension. Follow the steps shown in the Build 
+> section below.
+
+2. Enter your HKU Portal and go to `Timetable` → `My weekly schedule` → `List View` 
  → choose your semester.
 
 1. Click the extension icon in the toolbar and you shall see the menu.
@@ -72,6 +77,15 @@ commands:
 npm install
 npm run build
 ```
+
+The unpacked extension is output to the `dist` folder. To load it into Chrome,
+follow these steps:
+
+1. Open Chrome and navigate to `chrome://extensions/`.
+
+1. Enable `Developer mode` using the toggle switch in the top right corner.
+
+1. Click on `Load unpacked` and select the `dist` folder.
 
 ## License
 
